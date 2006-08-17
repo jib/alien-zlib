@@ -1,0 +1,11 @@
+#!/usr/bin/perl -w
+use File::Spec;
+use strict;
+
+my $dir = shift or die qq[No source directory provided!\n];
+my $new = File::Spec->catdir( $dir, 'Makefile' );
+my $cmd = "$^X -pi.bak -e's/-lz/libz.a/' $new";
+
+system($cmd) and die qq[Could not patch Makefile\n];					
+
+print "Makefile patched successfully\n";
