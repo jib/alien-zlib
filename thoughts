@@ -1,0 +1,22 @@
+Alien::Build::
+		::Win32
+		::FreeBSD
+		::etc		# @ISA A::B
+		
+		::Options	# flags/options object to configure etc
+		
+		::Autoconf
+		::ModPerl.pm	#?
+		::Perl			#?
+		::PerlMagick	#?
+		
+Alien::Lib::
+		Foo
+			lib/Foo.pm				# description
+			hints/$^O				# config auto
+			Makefile.PL || Build.PL
+			
+			
+			# pre/postamble hooks
+			# flags
+				
